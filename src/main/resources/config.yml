@@ -1,0 +1,18 @@
+language-file: "lang_en"
+
+private-pigeons: true
+
+pigeon-inventory:
+  size: 1
+  whitelist:
+    enabled: false
+    whitelist-is-blacklist: false
+    items:
+      - WRITTEN_BOOK
+
+taming:
+  crafting: true
+  name: "&aCorn"
+  lore:
+    - "&7Use to tame pigeons"
+    - "&7Right click on a pigeon to tame it."

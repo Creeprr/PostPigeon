@@ -1,0 +1,9 @@
+name: PostPigeon
+version: ${project.version}
+main: me.creeper.www.postpigeon.PostPigeon
+api-version: 1.13
+description: Homing pigeons in Minecraft
+commands:
+  pigeon:
+    aliases: [p]
+    description: "PostPigeon main command"
