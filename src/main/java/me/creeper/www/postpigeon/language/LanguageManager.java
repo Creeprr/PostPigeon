@@ -1,3 +1,20 @@
+/*
+ *  Copyright (C) 2021 Creeprr
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/
+ */
+
 package me.creeper.www.postpigeon.language;
 
 import lombok.val;
@@ -19,7 +36,7 @@ public final class LanguageManager {
 
     private static final LanguageManager INSTANCE = new LanguageManager();
 
-    private static final Map<PPMessage, String> translatedMap = new EnumMap<>(PPMessage.class);
+    private final Map<PPMessage, String> translatedMap = new EnumMap<>(PPMessage.class);
     private final Logger logger = Bukkit.getLogger();
 
     public void loadLanguage(final Plugin plugin) {
@@ -143,7 +160,7 @@ public final class LanguageManager {
         in.close();
     }
 
-    static String get(final PPMessage msg) {
+    String get(final PPMessage msg) {
         return translatedMap.get(msg);
     }
 

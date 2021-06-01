@@ -1,18 +1,38 @@
+# Thank you for using PostPigeon, if you need any help, you can contact me in the following discord:
+# > https://discord.gg/jtd9pG4
+
+#The language file used for public messages.
+#If you make a good translation to your language, feel free to contact me in the discord or
+#Submit a pull request to the github page. https://github.com/Creeprr/PostPigeon
 language-file: "lang_en"
 
+#When this feature is enabled, pigeon inventories can only be opened by the owner of the pigeon.
 private-pigeons: true
 
+#Configure the pigeon inventory
 pigeon-inventory:
+
+  #The size of the pigeon inventory. The value currently goes from 1-6, where 1 is a single row and 6 is a double chest.
   size: 1
+
+  #Configure allowed and disallowed items in the pigeon inventory.
   whitelist:
+    #Set to true to enabled whitelist/blacklist
     enabled: false
+    #Set to true to turn the whitelist into a blacklist.
     whitelist-is-blacklist: false
+    #A list of items on the whitelist/blacklist.
     items:
       - WRITTEN_BOOK
 
+#Settings for crafting corn, used to tame pigeons.
 taming:
+  #Set to false to disable the crafting recipe.
+  #NOTE: Change of this setting REQUIRES a restart/reload
   crafting: true
+  #The name of the crafted item. Color codes are available.
   name: "&aCorn"
+  #The lore of the crafted item. Color codes are available.
   lore:
     - "&7Use to tame pigeons"
     - "&7Right click on a pigeon to tame it."

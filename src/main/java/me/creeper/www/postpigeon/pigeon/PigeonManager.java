@@ -1,12 +1,29 @@
+/*
+ *  Copyright (C) 2021 Creeprr
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/
+ */
+
 package me.creeper.www.postpigeon.pigeon;
 
 import lombok.Getter;
 import lombok.val;
 import me.creeper.www.postpigeon.ConfigManager;
 import me.creeper.www.postpigeon.PostPigeon;
-import org.apache.logging.log4j.core.util.IOUtils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.libs.org.apache.commons.io.FileUtils;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
@@ -120,23 +137,12 @@ public class PigeonManager {
         return pigeonMap.get(uuid);
     }
 
-    @Nullable
-    public Pigeon getPigeon(final Inventory inventory) {
-        final UUID uuid = getPigeonUUID(inventory);
-        return uuid == null ? null : getPigeon(uuid);
-    }
-
-    public boolean isPigeonInventory(final Inventory inventory) {
+    boolean isPigeonInventory(final Inventory inventory) {
         return inventoryUUIDMap.containsKey(inventory);
     }
 
     @Nullable
-    public UUID getPigeonUUID(final Inventory inventory) {
-        return inventoryUUIDMap.get(inventory);
-    }
-
-    @Nullable
-    public PigeonAction pollPigeonAction(final UUID uuid) {
+    PigeonAction pollPigeonAction(final UUID uuid) {
         return actionCache.remove(uuid);
     }
 
