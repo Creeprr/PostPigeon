@@ -78,7 +78,8 @@ public class PostSubCommand extends PostPigeonSubCommand {
                 }
 
                 pigeon.setOwner(target);
-                Common.tell(sender, PPMessage.SENDING_PIGEON_TO.get(args[0]));
+                Common.tell(sender, PPMessage.SENDING_PIGEON_TO.get(target.getName()));
+                Common.tell(target, PPMessage.RECEIVING_PIGEON_FROM.get(sender.getName()));
 
             }
         });
