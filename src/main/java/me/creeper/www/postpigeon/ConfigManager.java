@@ -89,7 +89,7 @@ public class ConfigManager {
             return;
         }
 
-        craftingEnabled = tamingSection.getBoolean("enabled");
+        craftingEnabled = tamingSection.getBoolean("crafting");
         craftingName = tamingSection.getString("name");
 
         tamingSection.getStringList("lore").forEach(s -> craftingLore.add(Common.colorize(s)));

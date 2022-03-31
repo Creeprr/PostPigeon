@@ -29,6 +29,7 @@ public enum PPMessage {
     CLICK_ON_PIGEON_TO_SEND("&aClick on a pigeon to send it to '%arg1%'."),
     PLAYER_NO_LONGER_ONLINE("&cThe player '%arg1%' is no longer online."),
     SENDING_PIGEON_TO("&aSending the pigeon to %arg1%!"),
+    RECEIVING_PIGEON_FROM("&aYou should receive a pigeon from %arg1% very soon!"),
     RELOADED_CONFIG("&aSuccessfully reloaded the config."),
     UNKNOWN_PIGEON_VARIANT("&c'%arg1%' is not a valid pigeon variant. Options are as following:"),
     CLICK_TO_UNTAME("&aClick on the pigeon you wish to untame."),
